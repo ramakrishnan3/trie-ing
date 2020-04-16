@@ -14,7 +14,7 @@ var PQueue = require('./lib/pqueue');
  * after a trie mutation. After that the widthFactor is mostly irrelevant.
  */
 var Trie = function (options) {
-    this.root = new Node();
+    this.root = new Node(options.root || {});
     if (options && options.maxWidth) {
       this.maxWidth = options.maxWidth;
     } else {
